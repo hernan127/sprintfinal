@@ -7,6 +7,7 @@
         <h2>REGISTRARME</h2>
     </div>
   </div>
+  
     <div class="row">
         <div class="col-lg-6 offset-3">
               <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">

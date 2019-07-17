@@ -46,16 +46,17 @@
                       </li>
 
                       <li class="nav-item">
-                        <a class="nav-link" href="/macetas">Macetas</a>
+                        <a class="nav-link" href="/products">Productos</a>
+                        <!-- <a class="nav-link" href="/macetas">Macetas</a> -->
                       </li>
 
-                      <li class="nav-item">
+                      <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Plantas</a>
                       </li>
 
                       <li class="nav-item">
                         <a class="nav-link" href="#">Deco</a>
-                      </li>
+                      </li> -->
 
                       <li>
                         <a class="navbar-brand text-brand lg-viewport" href="index.php"> <img src="{{ asset('img/IsologoGardenia.png') }}" class="img-fluid" alt=""> </a>
@@ -72,6 +73,12 @@
                       <li>
                         <a class="nav-link" href="">Contacto</a>
                       </li>
+
+                      @if(auth()->user() && auth()->user()->role === 9)
+                      <li class="nav-item">
+                        <a class="nav-link" style="color:orange;" href="/backoffice">Administrar</a>
+                      </li>
+                      @endif
                         <!-- Authentication Links -->
 
                     </ul>

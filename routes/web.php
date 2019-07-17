@@ -19,6 +19,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/macetas', function() {
-  return view ('macetas');
-});
+Route::get('/products', 'ProductController@index');
+
+Route::get('/backoffice', 'BackofficeController@index');
+
+Route::get('/products/create', 'ProductController@create')->middleware("admin");
+
+Route::post('/products/create', 'ProductController@store');
+
+Route::get('/products/{id}', 'ProductController@show');
+
+Route::get('/products/{id}/edit', 'ProductController@edit');
+
+Route::patch('/products/{id}/edit', 'ProductController@update');
